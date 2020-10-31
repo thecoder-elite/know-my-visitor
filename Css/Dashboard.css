@@ -1,0 +1,174 @@
+body{
+    padding:none;
+    margin:none;
+    font-size:16px;
+    width: 100%;
+    height: auto; 
+}
+.main-container{
+    width: 100%;
+    height: auto;
+    padding:none;
+    margin:none;
+}
+
+.main-conatiner-header{
+    margin: 0;
+    padding: 0;
+    height: auto;
+    width: 100%;
+    box-shadow: 2px 2px 18px 1px #bebebe ;
+}
+
+.nav-link{
+    font-size: 18px;
+    padding: 5px;
+}
+
+.nav-link:hover{
+   background-color: rgba(230, 126, 34, 1);
+   border-radius: 2px;
+}
+
+.navbar-nav *{
+    margin-left: 10px;
+}
+
+.main-conatiner-body{
+    margin: 0;
+    padding: none;
+    height: auto;
+    width: 100%;
+}
+
+canvas{
+    border: 1px solid rgba(230, 126, 34, 1);
+}
+
+.search-button{
+    outline: none;
+    background-color: rgba(230, 126, 34, 1); 
+    border: 3px solid rgba(230, 126, 34, 1); 
+    border-radius: 10px; 
+    height: 40px;
+    width: 70px;
+    box-shadow: 0px 1px 4px 1px rgb(175, 175, 175);
+}
+
+.search-button:hover{
+    box-shadow: none;
+}
+
+.visitor_display{
+    width: 100%;
+    height: auto;
+}
+
+.visitor_info_display{
+    width: 100%;
+    padding: 15px 0; 
+    margin: none;
+    height: auto;
+    border: rgb(204, 201, 201);
+    box-shadow: 0 2px 3px 2px rgb(170, 169, 169);
+    display: grid;
+    grid-template-columns: 45% 45% 10%;
+}
+
+#visitor_pic{
+    width:180px;
+    height: 210px;
+}
+
+#visitor_name{
+    font-size: 30px;
+    margin-bottom: 0px;
+    font-weight: 600;
+    color: rgba(230, 126, 34, 1);
+}
+
+#visit_date{
+    margin-bottom: 0px;
+    color: rgb(139, 139, 139);
+}
+
+#visit_time{
+    margin-bottom: 0px;
+    color: rgb(139, 139, 139);
+   
+}
+
+#visit_reason{
+    margin-bottom: 0px;
+    color: rgb(139, 139, 139);
+}
+
+#visit_to{
+    margin-bottom: 0px;
+    color: rgb(139, 139, 139);
+}
+
+.chart_container *{
+    margin-top: 10px;
+}
+
+.date_selector *{
+    margin-top: 5px;
+}
+
+.user_verification{
+    height: 40px;
+    width: 40px;
+}
+
+.display_history{
+    margin: 25px;
+}
+
+#error{
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left:20%;
+    display: none;
+}
+
+@media only screen and (max-width: 768px) {
+    .search-button{
+        border-radius: 5px; 
+        height: 45px;
+        width: 100%;
+    }
+    #visitor_pic{
+        width:140px;
+        height: 190px;
+    }
+    #visitor_name{
+        font-size: 25px;
+    }
+    #visit_date{
+        font-size: 13px;
+    }
+    #visit_time{
+        font-size: 13px;
+    }
+    #visit_reason{
+        font-size: 13px;
+    }
+    #visit_to{
+        font-size: 13px;
+    }
+    .class1{
+        font-size: 13px;
+    }
+    .user_verification{
+        height: 30px;
+        width: 30px;
+    }   
+    .visitor_info_display{
+        margin: 0;
+        margin-top: 10px;
+    }
+  }
