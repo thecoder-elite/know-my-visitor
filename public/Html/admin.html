@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <!--- linking css and js file --->
+        <link href="../Css/admin.css" rel="stylesheet" type="text/css" />
+
+       
+
+        <!-- adding bootstrap library -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+       
+
+        <title>
+            Admin Page
+        </title>
+
+        <script src="../Js/face-api.js"></script>
+    </head>
+    <body>
+        <div class="main-container">
+            <div class="main-conatiner-header">
+                <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                    <a class="navbar-brand" href="#">Admin</a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                      <div class="navbar-nav">
+                        <a class="nav-link active" href="admin.html">Home <span class="sr-only">(current)</span></a>
+                        <a class="nav-link" href="Dashboard.html">Dashboard</a>
+                        <a class="nav-link" href="user_relation.html">Registered Users</a>
+                        <a class="nav-link" id="logoutButton" href="#">Log Out</a>
+                      </div>
+                    </div>
+                </nav>
+            </div> <br/>
+            <div class="main-container-body">
+                <div class="image_upload_class">
+                    <div class="accept_image">
+                        <div id="drag_drop_area" >
+                            <img src="../resources/plus.svg" id="display_image"/>
+                            <figcaption>Upload Image</figcaption>
+                        </div>
+                    </div>
+                    <input type="file" accept="image/*" onchange="loadFile(event)" id="file_input" accept="image/*"/>
+                    <div class="image_button_class" >
+                        <button id="upload" onclick="checkUser()" class="btn btn-primary">upload</button>
+                        <button id="cancel" onclick="cancelUpload()" class="btn btn-outline-primary">Cancel</button>
+                    </div>
+                </div>
+                <div class="image_details">
+                    <form class="row">
+                        <div class="form-group col-md-12 col-lg-6">
+                          <label for="visitor_name">Name</label>
+                          <input type="text" class="form-control" id="visitor_name" aria-describedby="Name">
+                        </div>
+                        <div class="form-group col-md-12 col-lg-6">
+                            <label for="visit_reason">Reason for visit</label>
+                            <input type="text" class="form-control" id="visit_reason">
+                        </div>
+                        <div class="form-group col-md-12 col-lg-4">
+                          <label for="visit_loc">To</label>
+                          <input type="text" class="form-control" id="visit_loc">
+                        </div>
+                        <div class="form-group col-md-6 col-lg-4">
+                            <label for="visit_time">Time</label>
+                            <input type="time" class="form-control" id="visit_time">
+                        </div>
+                        <div class="form-group col-md-6 col-lg-4">
+                            <label for="visit_date">Date</label>
+                            <input type="date" class="form-control" id="visit_Date">
+                        </div>
+                        <span class="col-lg-4"></span>
+                        <button type="submit" id= "uploadData" class="btn btn-primary col-md-12 col-lg-4" >Register</button>
+                      </form>
+                </div>
+            </div>
+        </div>
+        <div class="alert alert-danger" id="error" role="alert">Error</div>
+
+        
+
+       
+        <!-- bs file -->
+        <script defer src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script defer src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+        <script defer src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    
+        <script defer src="../Js/logout.js"></script>
+        <script defer src="../Js/admin.js" ></script>
+        <!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
+        <script  src="https://www.gstatic.com/firebasejs/7.22.1/firebase-app.js"></script>
+        <!-- Add Firebase products that you want to use -->
+        <script  src="https://www.gstatic.com/firebasejs/7.22.1/firebase-auth.js"></script>
+        <script  src="https://www.gstatic.com/firebasejs/7.22.1/firebase-firestore.js"></script>
+        <script  src="https://www.gstatic.com/firebasejs/7.22.1/firebase-storage.js"></script>
+    </body>
+</html>

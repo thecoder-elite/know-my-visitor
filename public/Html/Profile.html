@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+          <!-- Required meta tags -->
+          <meta charset="utf-8">
+          <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+          <!--- linking css and js file --->
+            <link  rel="stylesheet" href="../Css/profile.css" />
+        <!-- adding bootstrap library -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+        <title>
+            Notifications Page
+        </title>
+    </head>
+    <body>
+        <div >
+            <div class="main-conatiner-header">
+                <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                    <a class="navbar-brand" href="Notifications.html">User</a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                    <div class="navbar-nav">
+                        <a class="nav-link active" href="Notifications.html">Notifications<span class="sr-only">(current)</span></a>
+                        <a class="nav-link" href="Profile.html">My Profile</a>
+                        <a class="nav-link" id="logoutButton" href="#">Log Out</a>
+                    </div>
+                    </div>
+                </nav>
+            </div>
+            <div class="container" id="classContainer">
+    
+            </div>
+        </div>
+
+        <div class="alert alert-danger" id="error" role="alert">Error</div>
+        <script defer src="../Js/logout.js"></script>
+        <script defer src="../Js/profile.js"></script>
+
+        <!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
+        <script src="https://www.gstatic.com/firebasejs/7.22.1/firebase-app.js"></script>
+        <!-- Add Firebase products that you want to use -->
+        <script src="https://www.gstatic.com/firebasejs/7.22.1/firebase-auth.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.22.1/firebase-firestore.js"></script>
+      </body>
+</html>
