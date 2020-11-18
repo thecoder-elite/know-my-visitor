@@ -44,10 +44,11 @@ function doSomethingWithFiles(files) {
 
 let faceMatcher;
 async function faceChecker(){
+    
     await faceapi.loadSsdMobilenetv1Model('/models')   
     await faceapi.loadFaceLandmarkModel('/models')   
     await faceapi.loadFaceRecognitionModel('/models')
-    const labels = ['Ayaan', 'John', 'Will']
+    const labels = ['Ayaan', 'John', 'WillSmith']
 
     const labeledFaceDescriptors = await Promise.all(
         labels.map(async label => {
@@ -72,12 +73,20 @@ async function faceChecker(){
     faceMatcher = new faceapi.FaceMatcher(labeledFaceDescriptors, maxDescriptorDistance)
 }
 
-function checkUser(){
+function checkUser(e){
     let image = document.getElementById('display_image');
     if(image.src != '../resources/plus.svg'){
         let promise = face(image);
         promise.then((res) => {
             console.log(res);
+            let d = new Date();
+            let da = d.getDate();
+            if(da >0 && da<10)
+                da = "0"+da;
+            let date = d.getFullYear()+"-"+d.getMonth()+"-"+da;
+            let time = d.getHours()+":"+d.getMinutes();
+            document.getElementById("visit_Date").value = date
+            document.getElementById("visit_time").value = time
             if(res != "unknown"){
                 document.getElementById("visitor_name").value = res;
                 document.getElementById("visit_reason").value = "Resident";
@@ -85,8 +94,9 @@ function checkUser(){
                 verified = "true";
                 document.getElementById("drag_drop_area").style.boxShadow = "2px 2px 8px 6px #5cd65c";
             }
-            else
+            else{
                 document.getElementById("drag_drop_area").style.boxShadow = "2px 2px 8px 6px #ff704d";
+            }
         });  
     }
 } 
@@ -101,11 +111,14 @@ async function face(input){
 cancelUpload = () => {
     files = '';
     let image = document.getElementById('display_image');
-    image.src = 'resources/plus.svg'; 
+    image.src = '../resources/plus.svg'; 
     document.getElementById("drag_drop_area").style.boxShadow = "2px 2px 8px 6px rgb(235, 233, 233)";
 };
 
-document.getElementById("uploadData").addEventListener('click', e => {
+document.getElementById("uploadData").addEventListener('click',e =>  {uploadData(e)})
+
+
+function uploadData (e){
     e.preventDefault();
     const db = firebase.firestore();
     const storageRef = firebase.storage().ref();
@@ -161,4 +174,4 @@ document.getElementById("uploadData").addEventListener('click', e => {
             });
           });
     }
-})
+}

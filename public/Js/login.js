@@ -21,15 +21,15 @@ firebase.auth().onAuthStateChanged(function(user) {
         docRef.get().then(function(doc) {
             if (doc.exists) {
                 if(doc.data().usernames.includes(user.email))
-                    window.location.href = "admin.html";
+                    window.location.href = "Html/admin.html";
                 else
-                    window.location.href = "Notifications.html";
+                    window.location.href = "Html/Notifications.html";
                 
             } else {
-                error("Error validating user");
+                // error("Error validating user");
             }
         }).catch(function(error) {
-            error("Error validating user");
+            // error("Error validating user");
         });
     } else {
         localStorage.setItem("username", '');
@@ -40,22 +40,14 @@ firebase.auth().onAuthStateChanged(function(user) {
 function forgotButton(){
     document.getElementById("login").style.display = "none";
     document.getElementById("forgot").style.display = "block";
-}
+    document.getElementsByClassName("header")[0].innerHTML = "<h2>Forgot your password, <br>don't worry!</h2><p>Just enter your registered email id.</p>";
+    }
 
 function loginButton(){
     document.getElementById("forgot").style.display = "none";
     document.getElementById("login").style.display = "block";
+    document.getElementsByClassName("header")[0].innerHTML = "<h2>Welcome to, KnowYourVisitor</h2><p>Have a better control over your visitors.</p>";
 }
-
-document.getElementById("login_select").addEventListener('click', () => {
-    document.getElementById("login_select").style = "background-color: rgba(230, 126, 34, 1); color:white";
-    document.getElementById("forgot_select").style = " border: 1px solid rgba(230, 126, 34, 1); color: rgba(230, 126, 34, 1); background-color: white;";
-})
-
-document.getElementById("forgot_select").addEventListener('click', () => {
-    document.getElementById("forgot_select").style = "background-color: rgba(230, 126, 34, 1); color:white";
-    document.getElementById("login_select").style = " border: 1px solid rgba(230, 126, 34, 1); color: rgba(230, 126, 34, 1); background-color: white;";
-})
 
 document.getElementById("loginUser").addEventListener('click', e => {
     e.preventDefault();

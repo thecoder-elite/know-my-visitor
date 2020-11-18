@@ -134,34 +134,40 @@ canvas{
     left:20%;
     display: none;
 }
-
+.row{
+    margin: 0;
+}
 @media only screen and (max-width: 768px) {
+    body{
+        padding-bottom: 20px;
+    }
     .search-button{
         border-radius: 5px; 
         height: 45px;
         width: 100%;
+        margin-top:10px
     }
     #visitor_pic{
-        width:140px;
-        height: 190px;
+        width:150px;
+        height: 160px;
     }
     #visitor_name{
-        font-size: 25px;
+        font-size: 20px;
     }
     #visit_date{
-        font-size: 13px;
+        font-size: 15px;
     }
     #visit_time{
-        font-size: 13px;
+        font-size: 15px;
     }
     #visit_reason{
-        font-size: 13px;
+        font-size: 15px;
     }
     #visit_to{
-        font-size: 13px;
+        font-size: 15px;
     }
     .class1{
-        font-size: 13px;
+        font-size: 15px;
     }
     .user_verification{
         height: 30px;
@@ -170,5 +176,20 @@ canvas{
     .visitor_info_display{
         margin: 0;
         margin-top: 10px;
+        margin-bottom: 12px;
     }
+
+    .display_history{
+        width: 100%;
+        height: auto;
+        margin: 0;
+        padding: 0;
+    }
+    .display_history h1{
+        margin-left: 15px;
+    }
+    .row{
+        margin: 0!important;
+    }
+
   }

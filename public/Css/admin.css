@@ -62,7 +62,7 @@ body{
 }
 
 .image_details{
-    margin: 0 100px;
+    margin: 0 auto;
 }
 .btn-primary{
     background-color: #E67E22 !important;
@@ -92,4 +92,23 @@ body{
     left:20%;
     bottom: 10%;
     display: none;
+}
+
+@media only screen and (max-width:750px){
+    .image_details{
+        margin: 0 auto;
+        width: 90%;
+    }
+
+    #uploadData{
+        margin-top: 10px;
+    }
+    #drag_drop_area{
+        height: 250x;
+        width: 250px;
+    }
+    #display_image{
+        width: 200px;
+        height: 200px;
+    }
 }

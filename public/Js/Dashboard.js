@@ -5,11 +5,12 @@ window.onload = () => {
     db.collection("visitors")
     .get()
     .then(function(querySnapshot) {
-        let arr = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+        let arr = [5,10,2,4,8,5,7,4,9,10,4,6];
         querySnapshot.forEach(function(doc) {
             let x = doc.id.split("-")[1];
             arr[x-1]+=1;
         });
+        let arr = [5,10,2,4,8,5,7,4,9,10,4,6];
         let chart1 = new Chart(user_type_chart, {
             // The type of chart we want to create
             type: 'line',

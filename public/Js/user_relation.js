@@ -37,7 +37,6 @@ function displayData(userDetails){
     content=content+'<p>Flat no: </p>';
     content=content+'<p>'+userDetails.flatNo+'</p>';
     content=content+'</div>';
-    content=content+'<a href="#" class="btn btn-outline-primary" onclick="deleteUser()" style="margin: 3px;">Delete User</a>';
     content=content+'</div>';
     content += '</div>';
     

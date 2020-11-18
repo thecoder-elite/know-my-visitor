@@ -1,6 +1,8 @@
 <html>
     <head>
-        <title>Login</title>
+        <title>Welcome to know-my-visitor webapp</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="Css/login.css">
         <!-- adding bootstrap library -->
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
@@ -8,21 +10,23 @@
     <body>
         <div class="loginpage">
             <div class="formbox">
-                <div class="buttonbox">
-                    <button type="button" class="toggle-btn" id="login_select" onclick="loginButton()">Login</button>
-                    <button type="button" class="toggle-btn" id="forgot_select" onclick="forgotButton()">Forgot password</button>
+                <div class="header" style="text-align: center;">
+                    <h2>Welcome to, KnowYourVisitor</h2>
+                    <p>Have a better control over your visitors.</p>
                 </div>
                 <form id="login" class="inputgroup">
                     <div class="form-group">
                         <input type="text" id="user_email" class="form-control" placeholder="Email" >
                         <input type="password" id="user_password" class="form-control" placeholder="Enter password" >       
                         <button type="submit" id="loginUser" class="btn btn-primary form_submit">Login</button>
+                        <a href="#" id="forgot_select" onclick="forgotButton()">Forgot password</a>
                     </div>
                 </form>
                 <form id="forgot" class="inputgroup">
                     <div class="form-group">
                         <input type="text" id="forgotPasswordEmail" class="form-control" placeholder="Email" >   
                         <button type="submit" id="forgotPasswordButton" class="btn btn-primary form_submit">Submit</button>
+                        <a href="#" id="login_select" onclick="loginButton()">Login</a>
                     </div>
                 </form>
             </div>
