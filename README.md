@@ -3,10 +3,10 @@
 - It helps to identify any visitor as a resident or a guest based on their facial data using facial recognition.
 
 - It includes features like:
-  1. an admin dashboard to keep track of daily visitor. 
-    a. The no of visitors visiting each month and the no. of known and unknown visitors is displayed in the form of charts using the "chart.js" library.
-    b. The details of each visitor along with their images is displayed.
-  2. user notification to notify a user when a guest arrives at their house.
+  - an admin dashboard to keep track of daily visitor. 
+    - The no of visitors visiting each month and the no. of known and unknown visitors is displayed in the form of charts using the "chart.js" library.
+    - The details of each visitor along with their images is displayed.
+  - user notification to notify a user when a guest arrives at their house.
   
 - The web site is developed using:
   1. HTML5. 
