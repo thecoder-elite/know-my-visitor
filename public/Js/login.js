@@ -1,11 +1,12 @@
 var firebaseConfig = {
-    apiKey: "AIzaSyAkuwGjGSZ4MI29W5Uza7wrsoz5qZswlHk",
-    authDomain: "know-my-visitor.firebaseapp.com",
-    databaseURL: "https://know-my-visitor.firebaseio.com",
-    projectId: "know-my-visitor",
-    storageBucket: "know-my-visitor.appspot.com",
-    messagingSenderId: "907741984710",
-    appId: "1:907741984710:web:29b5c1ec55f65688ab24c7"
+    // add your details accordingly
+    apiKey: "__________",
+    authDomain: "__________",
+    databaseURL: "__________",
+    projectId: "__________",
+    storageBucket: "__________",
+    messagingSenderId: "__________",
+    appId: "__________"
   };
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
